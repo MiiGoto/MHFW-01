@@ -1,0 +1,1 @@
+FAULTS=['product_missing','arrival_delay','double_feed','film_end','film_slip','film_position_error','product_in_seal_zone','axis_following_error','sensor_stuck_on','sensor_stuck_off','communication_timeout','jam','guard_open','estop']

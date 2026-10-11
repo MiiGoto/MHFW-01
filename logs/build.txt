@@ -1,0 +1,41 @@
+build: Builds project.
+Start build in C:\Users\<user>\AppData\Local\Temp\mhfw-reva\project/plc/beremiz\build
+Generating SoftPLC IEC-61131 ST/IL/SFC code...
+    Collecting data types
+    Collecting POUs
+    Generate POU FB_AlarmManager
+    Generate POU FB_AxisSynchronization
+    Generate POU FB_BagLengthControl
+    Generate POU FB_CenterSeal
+    Generate POU FB_Cutter
+    Generate POU FB_Discharge
+    Generate POU FB_EndSeal
+    Generate POU FB_FilmFeed
+    Generate POU FB_InfeedConveyor
+    Generate POU FB_ModeManager
+    Generate POU FB_ProductDetection
+    Generate POU PRG_PackagingMachine
+    Generate Config(s)
+Compiling IEC Program into C code...
+0.504s
+Extracting Located Variables...
+C code generated successfully.
+PLC :
+   [CC]  plc_main.c -> plc_main.o
+1.628s
+   [CC]  plc_logging.c -> plc_logging.o
+0.386s
+   [CC]  plc_debugger.c -> plc_debugger.o
+0.699s
+   [CC]  config.c -> config.o
+0.683s
+   [CC]  resource1.c -> resource1.o
+0.862s
+0 :
+   [CC]  CFile_0.c -> CFile_0.o
+1.507s
+Linking :
+   [CC]  plc_main.o plc_logging.o plc_debugger.o config.o resource1.o CFile_0.o -> beremiz.dll
+0.298s
+Successfully built.
+PLC Status: Disconnected

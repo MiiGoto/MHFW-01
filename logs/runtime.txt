@@ -1,0 +1,201 @@
+transfer: Transfer program to PLC runtime.
+Starting local runtime...
+2.288s
+Beremiz_service:  1.5.1
+HTTP interface port : 8009
+WAMP deactivated in configuration
+UI thread started successfully.
+eRPC port : 61221
+Current working directory :C:\Users\<user>\AppData\Local\Temp\tmpyr0x1z0q
+2.339s
+ERPC connecting to URI : ERPC://127.0.0.1:61221
+Version string: Windows 11
+Latest build does not match with connected target.
+Stats[1970-01-01 00:00:00+00:00]:
+PLC Status: Empty
+PLC data transfered successfully.
+PLCobject : No files to purge
+PLCobject : NewPLC (acdea9bd966fdf7dae149c1960262847)
+PLC installed successfully.
+run: Run program already present in PLC.
+PLCobject : PLC started
+PLCobject : Python extensions started
+Starting PLC
+Press Ctrl+C to quit
+DEBUG at 2026-10-11 05:00:10.001000+00:00: PLC started
+DEBUG at 2026-10-11 05:00:10.001000+00:00: Python extensions started
+Stats[2026-10-11 05:00:10.005000+00:00]: PLC Cycle: 0% of 20ms
+PLC Status: Started
+Stats[2026-10-11 05:00:10.507000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:11.009000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:11.510000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:12.012000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:12.514000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:13.016000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:13.517000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:14.019000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:14.521000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:15.022000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:15.524000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:16.025000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:16.527000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:17.029000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:17.531000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:18.033000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:18.535000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:19.037000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:19.539000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:20.041000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:20.543000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:21.044000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:21.546000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:22.048000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:22.549000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:23.051000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:23.553000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:24.055000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:24.557000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:25.059000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:25.561000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:26.062000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:26.564000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:27.066000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:27.568000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:28.072000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:28.573000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:29.075000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:29.577000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:30.079000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:30.581000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:31.082000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:31.585000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:32.086000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:32.588000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:33.090000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:33.592000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:34.093000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:34.595000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:35.097000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:35.599000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:36.101000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:36.603000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:37.105000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:37.607000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:38.109000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:38.610000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:39.112000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:39.614000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:40.117000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:40.618000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:41.120000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:41.622000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:42.124000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:42.626000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:43.128000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:43.631000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:44.133000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:44.634000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:45.136000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:45.638000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:46.140000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:46.642000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:47.143000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:47.645000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:48.146000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:48.648000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:49.150000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:49.652000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:50.154000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:50.656000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:51.157000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:51.659000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:52.161000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:52.663000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:53.165000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:53.667000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:54.168000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:54.670000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:55.171000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:55.673000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:56.175000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:56.677000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:57.179000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:57.681000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:58.183000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:58.685000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:59.187000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:00:59.689000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:00.190000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:00.692000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:01.195000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:01.697000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:02.198000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:02.700000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:03.202000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:03.704000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:04.206000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:04.708000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:05.210000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:05.712000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:06.213000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:06.715000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:07.217000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:07.719000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:08.221000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:08.723000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:09.225000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:09.727000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:10.230000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:10.732000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:11.234000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:11.736000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:12.238000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:12.740000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:13.242000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:13.744000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:14.246000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:14.747000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:15.249000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:15.751000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:16.253000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:16.756000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:17.258000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:17.760000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:18.262000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:18.764000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:19.266000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:19.767000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:20.269000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:20.771000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:21.272000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:21.774000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:22.276000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:22.778000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:23.280000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:23.781000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:24.283000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:24.785000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:25.287000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:25.789000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:26.291000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:26.793000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:27.295000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:27.796000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:28.298000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:28.800000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:29.302000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:29.803000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:30.305000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:30.806000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:31.308000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:31.810000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:32.311000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:32.813000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:33.314000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:33.816000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:34.318000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:34.819000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:35.321000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:35.823000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:36.324000+00:00]: PLC Cycle: 0% of 20ms
+Stats[2026-10-11 05:01:36.826000+00:00]: PLC Cycle: 0% of 20ms

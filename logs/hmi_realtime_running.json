@@ -1,0 +1,146 @@
+{
+  "time": 53.86000000000282,
+  "products": [
+    {
+      "id": 0,
+      "x": 863.2122192382812,
+      "packed": true
+    },
+    {
+      "id": 4,
+      "x": 743.2119064331055,
+      "packed": true
+    },
+    {
+      "id": 5,
+      "x": 622.8135986328125,
+      "packed": true
+    },
+    {
+      "id": 6,
+      "x": 502.4154357910156,
+      "packed": false
+    },
+    {
+      "id": 7,
+      "x": 382.01727294921875,
+      "packed": false
+    },
+    {
+      "id": 8,
+      "x": 262.0123291015625,
+      "packed": false
+    },
+    {
+      "id": 9,
+      "x": 142.0050048828125,
+      "packed": false
+    }
+  ],
+  "axes": [
+    {
+      "position": 803.2122192382812,
+      "velocity": 20.001220703125,
+      "acceleration": 0.0,
+      "target": 803.2122192382812,
+      "error": 0.0,
+      "max_velocity": 500.0,
+      "max_acceleration": 5000.0,
+      "actual": 803.2122192382812
+    },
+    {
+      "position": 803.2122192382812,
+      "velocity": 20.001220703125,
+      "acceleration": 0.0,
+      "target": 803.2122192382812,
+      "error": 0.0,
+      "max_velocity": 500.0,
+      "max_acceleration": 5000.0,
+      "actual": 803.2122192382812
+    },
+    {
+      "position": 803.2122192382812,
+      "velocity": 20.001220703125,
+      "acceleration": 0.0,
+      "target": 803.2122192382812,
+      "error": 0.0,
+      "max_velocity": 500.0,
+      "max_acceleration": 5000.0,
+      "actual": 803.2122192382812
+    },
+    {
+      "position": 40.0,
+      "velocity": 0.0,
+      "acceleration": 0.0,
+      "target": 40.0,
+      "error": 0.0,
+      "max_velocity": 500.0,
+      "max_acceleration": 5000.0,
+      "actual": 40.0
+    },
+    {
+      "position": 803.2122192382812,
+      "velocity": 20.001220703125,
+      "acceleration": 0.0,
+      "target": 803.2122192382812,
+      "error": 0.0,
+      "max_velocity": 500.0,
+      "max_acceleration": 5000.0,
+      "actual": 803.2122192382812
+    }
+  ],
+  "faults": [],
+  "recipe": {
+    "product_length": 60,
+    "bag_pitch": 120,
+    "speed": 10,
+    "film_offset": 0,
+    "seal_offset": 0
+  },
+  "packages": 6,
+  "rejects": 0,
+  "product_sensor": true,
+  "seal_x": 480,
+  "plc": {
+    "Q_InfeedRun": 1.0,
+    "Q_FilmFeedEnable": 1.0,
+    "Q_CenterSealEnable": 1.0,
+    "Q_EndSealEnable": 0.0,
+    "Q_CutterEnable": 0.0,
+    "Q_DischargeRun": 1.0,
+    "Q_Mode": 2.0,
+    "Q_Alarm": 0.0,
+    "Q_Count": 6.0,
+    "Q_Reject": 0.0,
+    "Q_FilmTarget": 803.2122192382812,
+    "Q_EndSealTarget": 40.0,
+    "Q_InfeedTarget": 803.2122192382812,
+    "Q_CenterTarget": 803.2122192382812,
+    "Q_DischargeTarget": 803.2122192382812,
+    "Q_Speed": 20.0,
+    "Q_Phase": 0.6901016235351562,
+    "Q_Running": 1.0,
+    "Q_Scan": 2749.0,
+    "Q_Pitch": 120.0,
+    "Q_ResetAllowed": 1.0
+  },
+  "connection": true,
+  "error": "",
+  "accelerated": false,
+  "fault_catalog": [
+    "product_missing",
+    "arrival_delay",
+    "double_feed",
+    "film_end",
+    "film_slip",
+    "film_position_error",
+    "product_in_seal_zone",
+    "axis_following_error",
+    "sensor_stuck_on",
+    "sensor_stuck_off",
+    "communication_timeout",
+    "jam",
+    "guard_open",
+    "estop"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "protocol": "MHFW-UDP-v1 loopback request/reply; <4sI64f; 264 bytes; sequence echoed",
+  "inputs": ["I_Fresh", "I_CommAge", "I_StartPB", "I_StopPB", "I_ResetPB", "I_Mode", "I_GuardClosed", "I_EStopOK", "I_ProductPresent", "I_FilmMark", "I_FilmEnd", "I_EndSealHome", "I_ProductInSealZone", "I_AxisError", "I_FilmError", "I_DoubleFeed", "I_Jam", "I_PackagedAck", "I_RejectAck", "I_FilmPosition", "I_ProductPosition", "I_EndSealActual", "I_ProductLength", "I_BagPitch", "I_PackagingSpeed", "I_FilmOffset", "I_SealOffset", "I_Dt", "I_ColdReset", "I_InfeedActual", "I_CenterActual", "I_DischargeActual"],
+  "outputs": ["Q_InfeedRun", "Q_FilmFeedEnable", "Q_CenterSealEnable", "Q_EndSealEnable", "Q_CutterEnable", "Q_DischargeRun", "Q_Mode", "Q_Alarm", "Q_Count", "Q_Reject", "Q_FilmTarget", "Q_EndSealTarget", "Q_InfeedTarget", "Q_CenterTarget", "Q_DischargeTarget", "Q_Speed", "Q_Phase", "Q_Running", "Q_Scan", "Q_Pitch", "Q_ResetAllowed"]
+}

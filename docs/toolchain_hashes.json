@@ -1,0 +1,17 @@
+[
+  {
+    "file": "beremiz.zip",
+    "bytes": 734495405,
+    "sha256": "52c5f212def8fa034ad106c4178e7b410235101dc5b1515c586ef5ffbb29bf98"
+  },
+  {
+    "file": "beremiz151.zip",
+    "bytes": 743569050,
+    "sha256": "8691d426031a9dd748fd21a0ab9b68557706234f05d979d9d0fd7d02fa667a8b"
+  },
+  {
+    "file": "beremiz-1.5.1-source.zip",
+    "bytes": 9313593,
+    "sha256": "a95c1867816cca421b44bda9c32ddad0492ca11556bfaeb237b2b6492fe0f558"
+  }
+]

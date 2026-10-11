@@ -1,0 +1,9 @@
+test_acceleration_and_freeze (test_machine.MachineUnit.test_acceleration_and_freeze) ... ok
+test_kinematic_determinism (test_machine.MachineUnit.test_kinematic_determinism) ... ok
+test_product_collision_sensor (test_machine.MachineUnit.test_product_collision_sensor) ... ok
+test_udp_startup_port_unreachable (test_machine.MachineUnit.test_udp_startup_port_unreachable) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.016s
+
+OK

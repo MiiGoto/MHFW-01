@@ -1,0 +1,69 @@
+[
+  {
+    "test": "normal_auto",
+    "sim_seconds": 60,
+    "count": 10.0,
+    "reject": 0.0,
+    "rate": 10
+  },
+  {
+    "test": "test_02_product_missing",
+    "alarm": 1,
+    "time": 17.999999999999968
+  },
+  {
+    "test": "test_03_arrival_delay",
+    "alarm": 1,
+    "time": 19.199999999999964
+  },
+  {
+    "test": "test_04_film_end",
+    "alarm": 4,
+    "time": 4.800000000000002
+  },
+  {
+    "test": "test_05_film_position_error",
+    "alarm": 5,
+    "time": 4.800000000000002
+  },
+  {
+    "test": "test_06_seal_zone",
+    "alarm": 6,
+    "time": 4.800000000000002
+  },
+  {
+    "test": "test_07_axis_following",
+    "alarm": 7,
+    "time": 4.800000000000002
+  },
+  {
+    "test": "test_13_double_feed",
+    "alarm": 3,
+    "time": 4.800000000000002
+  },
+  {
+    "test": "test_14_film_slip",
+    "alarm": 5,
+    "time": 5.600000000000002
+  },
+  {
+    "test": "test_15_sensor_stuck_on",
+    "alarm": 2,
+    "time": 10.199999999999996
+  },
+  {
+    "test": "test_16_sensor_stuck_off",
+    "alarm": 1,
+    "time": 17.999999999999968
+  },
+  {
+    "test": "test_22_sensor_reset_denied",
+    "alarm": 2,
+    "time": 10.199999999999996
+  },
+  {
+    "test": "test_23_jam",
+    "alarm": 8,
+    "time": 4.800000000000002
+  }
+]

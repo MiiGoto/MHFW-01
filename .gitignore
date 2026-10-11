@@ -1,0 +1,9 @@
+tools/
+plc/beremiz/build/
+plc/beremiz/psk/
+__pycache__/
+*.pyc
+logs/*.jsonl
+logs/*.csv
+logs/*.pid
+logs/processes.json

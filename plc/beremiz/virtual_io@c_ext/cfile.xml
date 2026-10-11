@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CFile xmlns:xhtml="http://www.w3.org/1999/xhtml"><includes><xhtml:p>
+#define BOOL MH_WIN_BOOL
+#define _NO_BOOL_TYPEDEF
+#define INT MH_WIN_INT
+#define UINT MH_WIN_UINT
+#define DATE MH_WIN_DATE
+#define BYTE MH_WIN_BYTE
+#define WORD MH_WIN_WORD
+#define DWORD MH_WIN_DWORD
+#include &lt;winsock2.h&gt;
+#undef BOOL
+#undef INT
+#undef UINT
+#undef DATE
+#undef BYTE
+#undef WORD
+#undef DWORD
+#include &lt;stdint.h&gt;
+#include &lt;string.h&gt;
+#include &lt;math.h&gt;
+</xhtml:p></includes><variables><variable name="I_Fresh" type="REAL" initial="0.0" /><variable name="I_CommAge" type="REAL" initial="0.0" /><variable name="I_StartPB" type="REAL" initial="0.0" /><variable name="I_StopPB" type="REAL" initial="0.0" /><variable name="I_ResetPB" type="REAL" initial="0.0" /><variable name="I_Mode" type="REAL" initial="0.0" /><variable name="I_GuardClosed" type="REAL" initial="0.0" /><variable name="I_EStopOK" type="REAL" initial="0.0" /><variable name="I_ProductPresent" type="REAL" initial="0.0" /><variable name="I_FilmMark" type="REAL" initial="0.0" /><variable name="I_FilmEnd" type="REAL" initial="0.0" /><variable name="I_EndSealHome" type="REAL" initial="0.0" /><variable name="I_ProductInSealZone" type="REAL" initial="0.0" /><variable name="I_AxisError" type="REAL" initial="0.0" /><variable name="I_FilmError" type="REAL" initial="0.0" /><variable name="I_DoubleFeed" type="REAL" initial="0.0" /><variable name="I_Jam" type="REAL" initial="0.0" /><variable name="I_PackagedAck" type="REAL" initial="0.0" /><variable name="I_RejectAck" type="REAL" initial="0.0" /><variable name="I_FilmPosition" type="REAL" initial="0.0" /><variable name="I_ProductPosition" type="REAL" initial="0.0" /><variable name="I_EndSealActual" type="REAL" initial="0.0" /><variable name="I_ProductLength" type="REAL" initial="0.0" /><variable name="I_BagPitch" type="REAL" initial="0.0" /><variable name="I_PackagingSpeed" type="REAL" initial="0.0" /><variable name="I_FilmOffset" type="REAL" initial="0.0" /><variable name="I_SealOffset" type="REAL" initial="0.0" /><variable name="I_Dt" type="REAL" initial="0.0" /><variable name="I_ColdReset" type="REAL" initial="0.0" /><variable name="I_InfeedActual" type="REAL" initial="0.0" /><variable name="I_CenterActual" type="REAL" initial="0.0" /><variable name="I_DischargeActual" type="REAL" initial="0.0" /><variable name="Q_InfeedRun" type="REAL" initial="0.0" /><variable name="Q_FilmFeedEnable" type="REAL" initial="0.0" /><variable name="Q_CenterSealEnable" type="REAL" initial="0.0" /><variable name="Q_EndSealEnable" type="REAL" initial="0.0" /><variable name="Q_CutterEnable" type="REAL" initial="0.0" /><variable name="Q_DischargeRun" type="REAL" initial="0.0" /><variable name="Q_Mode" type="REAL" initial="0.0" /><variable name="Q_Alarm" type="REAL" initial="0.0" /><variable name="Q_Count" type="REAL" initial="0.0" /><variable name="Q_Reject" type="REAL" initial="0.0" /><variable name="Q_FilmTarget" type="REAL" initial="0.0" /><variable name="Q_EndSealTarget" type="REAL" initial="0.0" /><variable name="Q_InfeedTarget" type="REAL" initial="0.0" /><variable name="Q_CenterTarget" type="REAL" initial="0.0" /><variable name="Q_DischargeTarget" type="REAL" initial="0.0" /><variable name="Q_Speed" type="REAL" initial="0.0" /><variable name="Q_Phase" type="REAL" initial="0.0" /><variable name="Q_Running" type="REAL" initial="0.0" /><variable name="Q_Scan" type="REAL" initial="0.0" /><variable name="Q_Pitch" type="REAL" initial="0.0" /><variable name="Q_ResetAllowed" type="REAL" initial="0.0" /></variables><globals><xhtml:p>
+typedef struct { char magic[4]; uint32_t sequence; float values[64]; } MHFrame;
+static SOCKET mh_socket=INVALID_SOCKET;
+static struct sockaddr_in mh_peer;
+static MHFrame frame, reply;
+static uint32_t mh_last=0;
+static int mh_have=0, mh_pending=0;
+static unsigned short mh_owner_port=0;
+</xhtml:p></globals><initFunction><xhtml:p>
+WSADATA wd; u_long nonblock=1;
+struct sockaddr_in addr;
+if(WSAStartup(MAKEWORD(2,2),&amp;wd)!=0) return -1;
+mh_socket=socket(AF_INET,SOCK_DGRAM,IPPROTO_UDP);
+memset(&amp;addr,0,sizeof(addr)); addr.sin_family=AF_INET; addr.sin_port=htons(15020); addr.sin_addr.s_addr=htonl(INADDR_LOOPBACK);
+if(mh_socket==INVALID_SOCKET || bind(mh_socket,(struct sockaddr*)&amp;addr,sizeof(addr))!=0) return -1;
+ioctlsocket(mh_socket,FIONBIO,&amp;nonblock);
+mh_have=0; mh_pending=0; mh_owner_port=0; I_CommAge=0;
+</xhtml:p></initFunction><cleanUpFunction><xhtml:p>
+if(mh_socket!=INVALID_SOCKET) closesocket(mh_socket);
+mh_socket=INVALID_SOCKET; WSACleanup();
+</xhtml:p></cleanUpFunction><retrieveFunction><xhtml:p>
+int peerlen=sizeof(mh_peer), n, valid=1;
+MHFrame incoming;
+I_Fresh=0; I_CommAge+=0.02f; mh_pending=0;
+n=recvfrom(mh_socket,(char*)&amp;incoming,sizeof(incoming),0,(struct sockaddr*)&amp;mh_peer,&amp;peerlen);
+if(n==sizeof(incoming) &amp;&amp; memcmp(incoming.magic,"MHF1",4)==0) {
+    for(int j=0;j&lt;64;j++) if(!isfinite(incoming.values[j])) valid=0;
+    /* A replacement client may claim this local adapter only after the old
+       client timed out. PLC alarm/reset semantics still govern restart. */
+    if(valid &amp;&amp; mh_peer.sin_port!=mh_owner_port &amp;&amp; I_CommAge&gt;0.5f) mh_have=0;
+    if(valid &amp;&amp; (!mh_have || incoming.sequence&gt;mh_last)) {
+        frame=incoming; mh_last=frame.sequence; mh_have=1; mh_owner_port=mh_peer.sin_port;
+        I_Fresh = frame.values[0];
+I_CommAge = frame.values[1];
+I_StartPB = frame.values[2];
+I_StopPB = frame.values[3];
+I_ResetPB = frame.values[4];
+I_Mode = frame.values[5];
+I_GuardClosed = frame.values[6];
+I_EStopOK = frame.values[7];
+I_ProductPresent = frame.values[8];
+I_FilmMark = frame.values[9];
+I_FilmEnd = frame.values[10];
+I_EndSealHome = frame.values[11];
+I_ProductInSealZone = frame.values[12];
+I_AxisError = frame.values[13];
+I_FilmError = frame.values[14];
+I_DoubleFeed = frame.values[15];
+I_Jam = frame.values[16];
+I_PackagedAck = frame.values[17];
+I_RejectAck = frame.values[18];
+I_FilmPosition = frame.values[19];
+I_ProductPosition = frame.values[20];
+I_EndSealActual = frame.values[21];
+I_ProductLength = frame.values[22];
+I_BagPitch = frame.values[23];
+I_PackagingSpeed = frame.values[24];
+I_FilmOffset = frame.values[25];
+I_SealOffset = frame.values[26];
+I_Dt = frame.values[27];
+I_ColdReset = frame.values[28];
+I_InfeedActual = frame.values[29];
+I_CenterActual = frame.values[30];
+I_DischargeActual = frame.values[31];
+        I_Fresh=1; I_CommAge=0; mh_pending=1;
+    } else if(valid &amp;&amp; mh_have &amp;&amp; incoming.sequence==mh_last) {
+        /* Keep sequence idempotent, but publish current watchdog/stop state. */
+        reply.values[0] = Q_InfeedRun;
+reply.values[1] = Q_FilmFeedEnable;
+reply.values[2] = Q_CenterSealEnable;
+reply.values[3] = Q_EndSealEnable;
+reply.values[4] = Q_CutterEnable;
+reply.values[5] = Q_DischargeRun;
+reply.values[6] = Q_Mode;
+reply.values[7] = Q_Alarm;
+reply.values[8] = Q_Count;
+reply.values[9] = Q_Reject;
+reply.values[10] = Q_FilmTarget;
+reply.values[11] = Q_EndSealTarget;
+reply.values[12] = Q_InfeedTarget;
+reply.values[13] = Q_CenterTarget;
+reply.values[14] = Q_DischargeTarget;
+reply.values[15] = Q_Speed;
+reply.values[16] = Q_Phase;
+reply.values[17] = Q_Running;
+reply.values[18] = Q_Scan;
+reply.values[19] = Q_Pitch;
+reply.values[20] = Q_ResetAllowed;
+        sendto(mh_socket,(char*)&amp;reply,sizeof(reply),0,(struct sockaddr*)&amp;mh_peer,sizeof(mh_peer));
+    }
+}
+</xhtml:p></retrieveFunction><publishFunction><xhtml:p>
+if(mh_pending) {
+    memset(&amp;reply,0,sizeof(reply)); memcpy(reply.magic,"MHF1",4); reply.sequence=mh_last;
+    reply.values[0] = Q_InfeedRun;
+reply.values[1] = Q_FilmFeedEnable;
+reply.values[2] = Q_CenterSealEnable;
+reply.values[3] = Q_EndSealEnable;
+reply.values[4] = Q_CutterEnable;
+reply.values[5] = Q_DischargeRun;
+reply.values[6] = Q_Mode;
+reply.values[7] = Q_Alarm;
+reply.values[8] = Q_Count;
+reply.values[9] = Q_Reject;
+reply.values[10] = Q_FilmTarget;
+reply.values[11] = Q_EndSealTarget;
+reply.values[12] = Q_InfeedTarget;
+reply.values[13] = Q_CenterTarget;
+reply.values[14] = Q_DischargeTarget;
+reply.values[15] = Q_Speed;
+reply.values[16] = Q_Phase;
+reply.values[17] = Q_Running;
+reply.values[18] = Q_Scan;
+reply.values[19] = Q_Pitch;
+reply.values[20] = Q_ResetAllowed;
+    sendto(mh_socket,(char*)&amp;reply,sizeof(reply),0,(struct sockaddr*)&amp;mh_peer,sizeof(mh_peer));
+}
+</xhtml:p></publishFunction></CFile>

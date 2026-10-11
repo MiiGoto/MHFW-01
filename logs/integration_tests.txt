@@ -1,0 +1,29 @@
+test_01_normal_auto (__main__.Integration.test_01_normal_auto) ... ok
+test_02_product_missing (__main__.Integration.test_02_product_missing) ... ok
+test_03_arrival_delay (__main__.Integration.test_03_arrival_delay) ... ok
+test_04_film_end (__main__.Integration.test_04_film_end) ... ok
+test_05_film_position_error (__main__.Integration.test_05_film_position_error) ... ok
+test_06_seal_zone (__main__.Integration.test_06_seal_zone) ... ok
+test_07_axis_following (__main__.Integration.test_07_axis_following) ... ok
+test_08_communication_timeout (__main__.Integration.test_08_communication_timeout) ... ok
+test_09_stop_restart (__main__.Integration.test_09_stop_restart) ... ok
+test_10_reset_denied (__main__.Integration.test_10_reset_denied) ... ok
+test_11_pitch_change (__main__.Integration.test_11_pitch_change) ... ok
+test_12_speed_change (__main__.Integration.test_12_speed_change) ... ok
+test_13_double_feed (__main__.Integration.test_13_double_feed) ... ok
+test_14_film_slip (__main__.Integration.test_14_film_slip) ... ok
+test_15_sensor_stuck_on (__main__.Integration.test_15_sensor_stuck_on) ... ok
+test_16_sensor_stuck_off (__main__.Integration.test_16_sensor_stuck_off) ... ok
+test_17_single_cycle (__main__.Integration.test_17_single_cycle) ... ok
+test_18_guard_and_estop (__main__.Integration.test_18_guard_and_estop) ... ok
+test_19_invalid_recipe (__main__.Integration.test_19_invalid_recipe) ... ok
+test_20_manual (__main__.Integration.test_20_manual) ... ok
+test_21_duplicate_packet (__main__.Integration.test_21_duplicate_packet) ... ok
+test_22_sensor_reset_denied (__main__.Integration.test_22_sensor_reset_denied) ... ok
+test_23_jam (__main__.Integration.test_23_jam) ... ok
+test_24_replacement_client (__main__.Integration.test_24_replacement_client) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 28.509s
+
+OK
